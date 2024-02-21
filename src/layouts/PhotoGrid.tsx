@@ -2,11 +2,9 @@ import { Container, Grid, ImageList, Typography } from '@mui/material'
 import usePhotos from '../hooks/usePhotos'
 
 const PhotoGrid = () => {
-  const { photos, error } = usePhotos()
+  const { photos, error, isLoading } = usePhotos()
 
   if (error) return <div>Error: {error}</div>
-
-  console.log(photos)
 
   return (
     <Container
@@ -20,6 +18,7 @@ const PhotoGrid = () => {
         gap: { xs: 3, sm: 6 },
       }}
     >
+      {isLoading && <Typography variant='h4'>Loading...</Typography>}
       <Grid container spacing={2}>
         {photos?.map((photo) => (
           <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={photo.id}>
