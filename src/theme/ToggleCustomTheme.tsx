@@ -1,9 +1,9 @@
 import ModeNightRoundedIcon from '@mui/icons-material/ModeNightRounded'
 import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded'
 import { Box, ToggleButton, ToggleButtonGroup } from '@mui/material'
-import { ToggleCustomThemeProps } from '../App'
+import { ToggleCustomThemeProps } from '../entities/ToggleCustomThemeProps'
 
-export function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }: ToggleCustomThemeProps) {
+const ToggleCustomTheme = ({ showCustomTheme, toggleCustomTheme }: ToggleCustomThemeProps) => {
   return (
     <Box
       sx={{
@@ -35,3 +35,5 @@ export function ToggleCustomTheme({ showCustomTheme, toggleCustomTheme }: Toggle
     </Box>
   )
 }
+
+export default ToggleCustomTheme

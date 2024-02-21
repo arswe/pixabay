@@ -4,15 +4,10 @@ import { useState } from 'react'
 import Footer from './components/common/Footer'
 import Navbar from './components/common/Navbar'
 import ProjectsGrid from './layouts/ProjectsGrid'
-import { ToggleCustomTheme } from './theme/ToggleCustomTheme'
+import ToggleCustomTheme from './theme/ToggleCustomTheme'
 import getLPTheme from './theme/theme'
 
 const defaultTheme = createTheme({})
-
-export interface ToggleCustomThemeProps {
-  showCustomTheme: boolean
-  toggleCustomTheme: () => void
-}
 
 const App = () => {
   const [mode, setMode] = useState<PaletteMode>('dark')
