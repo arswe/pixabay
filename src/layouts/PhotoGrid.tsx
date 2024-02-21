@@ -22,8 +22,8 @@ const PhotoGrid = () => {
       {isLoading && <Typography variant='h4'>Loading...</Typography>}
       <Grid container spacing={2}>
         {photos?.map((photo) => (
-          <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={photo.id}>
-            <ImageList variant='woven' sx={{ width: 350, height: 250 }}>
+          <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={photo.id}>
+            <ImageList variant='woven' sx={{ minWidth: 350, minHeight: 250 }}>
               <PhotoCard photo={photo} />
             </ImageList>
           </Grid>
