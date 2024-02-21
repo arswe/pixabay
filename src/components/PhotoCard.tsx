@@ -1,6 +1,6 @@
 import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 
-const ProjectCard = () => {
+const PhotoCard = () => {
   return (
     <Card>
       <CardActionArea>
@@ -27,4 +27,4 @@ const ProjectCard = () => {
   )
 }
 
-export default ProjectCard
+export default PhotoCard

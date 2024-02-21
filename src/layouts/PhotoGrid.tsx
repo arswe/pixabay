@@ -1,7 +1,7 @@
 import { Container, Grid } from '@mui/material'
-import ProjectCard from '../components/ProjectCard'
+import PhotoCard from '../components/PhotoCard'
 
-const ProjectsGrid = () => {
+const PhotoGrid = () => {
   const projects = [1, 2, 3]
   return (
     <Container
@@ -18,7 +18,7 @@ const ProjectsGrid = () => {
       <Grid container spacing={2}>
         {projects.map((project, index) => (
           <Grid item xs={4} key={index}>
-            <ProjectCard />
+            <PhotoCard />
           </Grid>
         ))}
       </Grid>
@@ -26,4 +26,4 @@ const ProjectsGrid = () => {
   )
 }
 
-export default ProjectsGrid
+export default PhotoGrid

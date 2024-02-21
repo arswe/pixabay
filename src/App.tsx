@@ -3,7 +3,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { useState } from 'react'
 import Footer from './components/common/Footer'
 import Navbar from './components/common/Navbar'
-import ProjectsGrid from './layouts/ProjectsGrid'
+import PhotoGrid from './layouts/PhotoGrid'
 import ToggleCustomTheme from './theme/ToggleCustomTheme'
 import getLPTheme from './theme/theme'
 
@@ -26,7 +26,7 @@ const App = () => {
       <Navbar mode={mode} toggleColorMode={toggleColorMode} />
 
       <Box sx={{ bgcolor: 'background.default' }}>
-        <ProjectsGrid />
+        <PhotoGrid />
       </Box>
       <Footer />
       <ToggleCustomTheme showCustomTheme={showCustomTheme} toggleCustomTheme={toggleCustomTheme} />
