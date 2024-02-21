@@ -1,4 +1,5 @@
 import { Container, Grid, ImageList, Typography } from '@mui/material'
+import PhotoCard from '../components/PhotoCard'
 import usePhotos from '../hooks/usePhotos'
 
 const PhotoGrid = () => {
@@ -22,10 +23,8 @@ const PhotoGrid = () => {
       <Grid container spacing={2}>
         {photos?.map((photo) => (
           <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={photo.id}>
-            <ImageList variant='woven'>
-              <Typography variant='h6' align='center'>
-                {photo.user}
-              </Typography>
+            <ImageList variant='woven' sx={{ width: 350, height: 250 }}>
+              <PhotoCard photo={photo} />
             </ImageList>
           </Grid>
         ))}
