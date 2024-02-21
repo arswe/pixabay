@@ -1,17 +1,8 @@
 import { CanceledError } from 'axios'
 import { useEffect, useState } from 'react'
+import FetchPhotoResponse from '../entities/FetchPhotoResponse'
+import Photo from '../entities/Photo'
 import apiClient from '../services/apiClient'
-interface Photo {
-  id: number
-  user: string
-  tags: string
-}
-
-interface FetchPhotoResponse {
-  total: number
-  totalHits: number
-  hits: Photo[]
-}
 
 const usePhotos = () => {
   const [photos, setPhotos] = useState<Photo[]>([])
