@@ -1,29 +1,8 @@
 import { Container, Grid, ImageList, Typography } from '@mui/material'
-import { useEffect, useState } from 'react'
-import apiClient from '../services/apiClient'
-
-interface Photo {
-  id: number
-  user: string
-  tags: string
-}
-
-interface FetchPhotoResponse {
-  total: number
-  totalHits: number
-  hits: Photo[]
-}
+import usePhotos from '../hooks/usePhotos'
 
 const PhotoGrid = () => {
-  const [photos, setPhotos] = useState<Photo[]>([])
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    apiClient
-      .get<FetchPhotoResponse>('/', { params: { q: 'nature', image_type: 'photo' } })
-      .then((response) => setPhotos(response.data.hits))
-      .catch((err) => setError(err.message))
-  }, [])
+  const { photos, error } = usePhotos()
 
   if (error) return <div>Error: {error}</div>
 
@@ -42,8 +21,8 @@ const PhotoGrid = () => {
       }}
     >
       <Grid container spacing={2}>
-        {photos?.map((photo, index) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={index}>
+        {photos?.map((photo) => (
+          <Grid item xs={6} sm={6} md={4} lg={3} xl={2} key={photo.id}>
             <ImageList variant='woven'>
               <Typography variant='h6' align='center'>
                 {photo.user}
