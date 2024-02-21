@@ -1,9 +1,9 @@
 import { PaletteMode } from '@mui/material'
 import { ThemeOptions, alpha } from '@mui/material/styles'
 import type {} from '@mui/material/themeCssVarsAugmentation'
+import { brand } from './colors/brand'
+import { gray } from './colors/gray'
 import { getDesignTokens } from './getDesignTokens'
-import { brand } from './types/brand'
-import { gray } from './types/gray'
 
 declare module '@mui/material/styles/createPalette' {
   interface ColorRange {

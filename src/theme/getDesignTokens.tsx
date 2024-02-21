@@ -1,10 +1,10 @@
 import { PaletteMode } from '@mui/material'
 import { red } from '@mui/material/colors'
 import { alpha } from '@mui/material/styles'
-import { green } from './types/green'
-import { secondary } from './types/secondary'
-import { brand } from './types/brand'
-import { gray } from './types/gray'
+import { brand } from './colors/brand'
+import { gray } from './colors/gray'
+import { green } from './colors/green'
+import { secondary } from './colors/secondary'
 
 export const getDesignTokens = (mode: PaletteMode) => ({
   palette: {
