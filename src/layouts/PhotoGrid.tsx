@@ -1,8 +1,18 @@
 import { Container, Grid, ImageList } from '@mui/material'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 import PhotoCard from '../components/PhotoCard'
 
+
 const PhotoGrid = () => {
-  const photos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+  const { photos, setPhotos } = useState([])
+
+  useEffect(() => {
+    const response = axios.get('/api/photos')
+    const data = response.data
+    setPhotos(data)
+  }, [])
+
   return (
     <Container
       sx={{
