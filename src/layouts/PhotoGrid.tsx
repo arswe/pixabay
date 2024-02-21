@@ -1,6 +1,5 @@
-import { Container, Grid, ImageList } from '@mui/material'
+import { Container, Grid, ImageList, Typography } from '@mui/material'
 import { useEffect, useState } from 'react'
-import PhotoCard from '../components/PhotoCard'
 import apiClient from '../services/apiClient'
 
 interface Photo {
@@ -46,7 +45,9 @@ const PhotoGrid = () => {
         {photos?.map((photo, index) => (
           <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={index}>
             <ImageList variant='woven'>
-              <PhotoCard photo={photo} />
+              <Typography variant='h6' align='center'>
+                {photo.user}
+              </Typography>
             </ImageList>
           </Grid>
         ))}

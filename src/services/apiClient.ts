@@ -3,6 +3,6 @@ import axios from 'axios'
 export default axios.create({
   baseURL: 'https://pixabay.com/api',
   params: {
-    key: process.env.REACT_APP_PIXABAY_API_KEY,
+    key: '42493300-555c9a42a17d9b717de5e9c96',
   },
 })
