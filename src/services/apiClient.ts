@@ -1,8 +1,9 @@
 import axios from 'axios'
+import { API_KEY, API_URL } from '../constants/constants'
 
 export default axios.create({
-  baseURL: 'https://pixabay.com/api',
+  baseURL: API_URL,
   params: {
-    key: '42493300-555c9a42a17d9b717de5e9c96',
+    key: API_KEY,
   },
 })
